@@ -1,0 +1,10 @@
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.exe.config
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.exe
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.pdb
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.AssemblyReference.cache
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Properties.Resources.resources
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.GenerateResource.cache
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.CoreCompileInputs.cache
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.exe
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.pdb
+C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Simulacion_1.resources
