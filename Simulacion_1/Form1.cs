@@ -53,8 +53,8 @@ namespace Simulacion_1
 
         private void LimpiarGrilla()
         {
-            dgv.DataSource = new List<object>();
-            dgv.Refresh();
+            dgvMetodo.DataSource = new List<object>();
+            dgvMetodo.Refresh();
         }
 
         private IList GenerarNumeros()
@@ -85,8 +85,8 @@ namespace Simulacion_1
         private void MostrarDataSource(IList lista)
         {
             LimpiarGrilla();
-            dgv.DataSource = lista;
-            dgv.Refresh();
+            dgvMetodo.DataSource = lista;
+            dgvMetodo.Refresh();
         }
 
         private void Generar()
@@ -105,7 +105,7 @@ namespace Simulacion_1
         {
             Metodo.GenerarValorExtra();
             MostrarDataSource(GenerarLista(Metodo.GetValores()));
-            dgv.Refresh();
+            dgvMetodo.Refresh();
         }
 
         private List<Iteracion> GenerarLista(List<double> lst)
