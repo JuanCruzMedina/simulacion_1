@@ -21,7 +21,7 @@ namespace Simulacion_1.Clases
 
         #region Constructor
 
-        public DelLenguaje(int m, int a, int semilla, int cantidad) : base(m, a, semilla, cantidad)
+        public DelLenguaje(int m, int a, int g, int k, int semilla, int cantidad) : base(m, a, g, k, semilla, cantidad)
         {
         }
 

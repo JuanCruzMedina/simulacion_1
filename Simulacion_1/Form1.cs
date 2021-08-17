@@ -20,10 +20,12 @@ namespace Simulacion_1
         #endregion
 
         #region Propiedades
+        private readonly int cantidadMostrar = 20;
 
         public IMetodoGeneracion Metodo { get; set; }
         public List<Iteracion> DataSource { get; set; }
         public int CantidadMostrar { get; set; }
+        public int MostrarDesde { get; set; }
 
         #endregion
 
@@ -34,6 +36,7 @@ namespace Simulacion_1
             cboMetodo.SelectedIndex = 0;
             DataSource = new List<Iteracion>();
             LimpiarGrilla();
+            MostrarDesde = 0;
         }
 
         private Condiciones GetCondiciones()
@@ -65,11 +68,11 @@ namespace Simulacion_1
                 var condiciones = GetCondiciones();
 
                 if (cboMetodo.SelectedIndex == 0)
-                    Metodo = new CongruencialMixto(condiciones.M, condiciones.A, condiciones.Semilla, condiciones.C, condiciones.Cantidad);
+                    Metodo = new CongruencialMixto(condiciones.M, condiciones.A, condiciones.Semilla, condiciones.C, condiciones.G, condiciones.K, condiciones.Cantidad);
                 else if (cboMetodo.SelectedIndex == 1)
-                    Metodo = new CongruencialMultiplicativo(condiciones.M, condiciones.A, condiciones.Semilla, condiciones.Cantidad);
+                    Metodo = new CongruencialMultiplicativo(condiciones.M, condiciones.A, condiciones.Semilla, condiciones.G, condiciones.K, condiciones.Cantidad);
                 else
-                    Metodo = new DelLenguaje(condiciones.M, condiciones.A, condiciones.Semilla, condiciones.Cantidad);
+                    Metodo = new DelLenguaje(condiciones.M, condiciones.A, condiciones.G, condiciones.K, condiciones.Semilla, condiciones.Cantidad);
 
                 Metodo.GenerarValores();
                 listaDataSource = GenerarLista(Metodo.GetValores());
@@ -89,10 +92,30 @@ namespace Simulacion_1
             dgvMetodo.Refresh();
         }
 
+        private List<Iteracion> MostrarPorCantidad(int cantidad = 20)
+        {
+            try
+            {
+                if (DataSource != null)
+                {
+                    var lst = DataSource.GetRange(MostrarDesde, cantidad);
+                    MostrarDesde += cantidad;
+                    return lst;
+                }
+                return DataSource;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //MessageBox.Show("Ocurrio una inconsistencia al mostrar por cantidad");
+                return null;
+            }
+        }
+
         private void Generar()
         {
             DataSource = GenerarNumeros() as List<Iteracion>;
-            MostrarDataSource(DataSource);
+            MostrarDataSource(MostrarPorCantidad());
         }
 
         private void AplicarRango()
@@ -129,7 +152,7 @@ namespace Simulacion_1
         }
         private void btnProximo_Click(object sender, EventArgs e)
         {
-            ObtenerProximoValor();
+            MostrarDataSource(MostrarPorCantidad());
         }
         private void btnAplicarRango_Click(object sender, EventArgs e)
         {
@@ -137,6 +160,5 @@ namespace Simulacion_1
         }
 
         #endregion
-
     }
 }

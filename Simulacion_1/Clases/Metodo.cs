@@ -10,10 +10,12 @@ namespace Simulacion_1.Clases
     {
         #region Constructor
 
-        protected Metodo(int m, int a, int semilla, int cantidad)
+        protected Metodo(int m, int a, int g, int k, int semilla, int cantidad)
         {
             M = m;
             A = a;
+            G = g;
+            K = k;
             Semilla = semilla;
             Cantidad = cantidad;
             Xi = semilla;
@@ -25,6 +27,8 @@ namespace Simulacion_1.Clases
 
         private protected int M { get; set; }
         private protected int A { get; set; }
+        private protected int G { get; set; }
+        private protected int K { get; set; }
         private protected int Semilla { get; set; }
         private protected int Cantidad { get; set; }
         private protected double Random { get; set; }

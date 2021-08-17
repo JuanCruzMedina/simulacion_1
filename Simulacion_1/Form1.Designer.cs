@@ -63,10 +63,10 @@ namespace Simulacion_1
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtConfianza = new System.Windows.Forms.MaskedTextBox();
+            this.dgvChi = new System.Windows.Forms.DataGridView();
             this.txt_intervalos = new System.Windows.Forms.MaskedTextBox();
             this.btnReiniciar = new System.Windows.Forms.Button();
             this.btnProbar = new System.Windows.Forms.Button();
-            this.dgvChi = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -338,11 +338,11 @@ namespace Simulacion_1
             // 
             // btnProximo
             // 
-            this.btnProximo.Location = new System.Drawing.Point(347, 29);
+            this.btnProximo.Location = new System.Drawing.Point(353, 29);
             this.btnProximo.Name = "btnProximo";
             this.btnProximo.Size = new System.Drawing.Size(104, 23);
             this.btnProximo.TabIndex = 3;
-            this.btnProximo.Text = "Proximo valor";
+            this.btnProximo.Text = "Próximos 20";
             this.btnProximo.UseVisualStyleBackColor = true;
             this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
@@ -453,9 +453,23 @@ namespace Simulacion_1
             this.txtConfianza.Name = "txtConfianza";
             this.txtConfianza.Size = new System.Drawing.Size(75, 20);
             this.txtConfianza.TabIndex = 0;
-            this.txtConfianza.Text = "3";
+            this.txtConfianza.Text = "95";
             this.txtConfianza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtConfianza.ValidatingType = typeof(int);
+            // 
+            // dgvChi
+            // 
+            this.dgvChi.AllowUserToAddRows = false;
+            this.dgvChi.AllowUserToDeleteRows = false;
+            this.dgvChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChi.BackgroundColor = System.Drawing.Color.White;
+            this.dgvChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChi.Location = new System.Drawing.Point(6, 74);
+            this.dgvChi.Name = "dgvChi";
+            this.dgvChi.ReadOnly = true;
+            this.dgvChi.RowHeadersWidth = 5;
+            this.dgvChi.Size = new System.Drawing.Size(263, 224);
+            this.dgvChi.TabIndex = 6;
             // 
             // txt_intervalos
             // 
@@ -485,20 +499,6 @@ namespace Simulacion_1
             this.btnProbar.TabIndex = 4;
             this.btnProbar.Text = "Probar";
             this.btnProbar.UseVisualStyleBackColor = true;
-            // 
-            // dgvChi
-            // 
-            this.dgvChi.AllowUserToAddRows = false;
-            this.dgvChi.AllowUserToDeleteRows = false;
-            this.dgvChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvChi.BackgroundColor = System.Drawing.Color.White;
-            this.dgvChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChi.Location = new System.Drawing.Point(6, 74);
-            this.dgvChi.Name = "dgvChi";
-            this.dgvChi.ReadOnly = true;
-            this.dgvChi.RowHeadersWidth = 5;
-            this.dgvChi.Size = new System.Drawing.Size(263, 224);
-            this.dgvChi.TabIndex = 6;
             // 
             // Simulacion_1
             // 

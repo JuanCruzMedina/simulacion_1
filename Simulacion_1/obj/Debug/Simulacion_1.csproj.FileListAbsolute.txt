@@ -8,3 +8,15 @@ C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csp
 C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.exe
 C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.pdb
 C:\Users\juan_\source\repos\Simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Simulacion_1.resources
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.exe.config
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.exe
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.pdb
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csprojAssemblyReference.cache
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Simulacion_1.resources
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Properties.Resources.resources
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.GenerateResource.cache
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.CoreCompileInputs.cache
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.exe
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.pdb
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\bin\Debug\alglib.net.dll
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.CopyComplete
