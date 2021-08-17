@@ -62,7 +62,7 @@ namespace Simulacion_1
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtConfianza = new System.Windows.Forms.MaskedTextBox();
+            this.txt_confianza = new System.Windows.Forms.MaskedTextBox();
             this.dgvChi = new System.Windows.Forms.DataGridView();
             this.txt_intervalos = new System.Windows.Forms.MaskedTextBox();
             this.btnReiniciar = new System.Windows.Forms.Button();
@@ -139,6 +139,7 @@ namespace Simulacion_1
             this.txt_m.Text = "8";
             this.txt_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_m.ValidatingType = typeof(int);
+            this.txt_m.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_m_KeyUp);
             // 
             // label2
             // 
@@ -213,6 +214,7 @@ namespace Simulacion_1
             this.txt_k.Text = "3";
             this.txt_k.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_k.ValidatingType = typeof(int);
+            this.txt_k.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_k_KeyUp);
             // 
             // txt_cantidad
             // 
@@ -246,6 +248,7 @@ namespace Simulacion_1
             this.txt_g.Text = "3";
             this.txt_g.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_g.ValidatingType = typeof(int);
+            this.txt_g.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_g_KeyUp);
             // 
             // txt_c
             // 
@@ -268,6 +271,7 @@ namespace Simulacion_1
             this.txt_a.Text = "13";
             this.txt_a.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_a.ValidatingType = typeof(int);
+            this.txt_a.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_a_KeyUp);
             // 
             // label8
             // 
@@ -311,6 +315,7 @@ namespace Simulacion_1
             this.cboMetodo.Name = "cboMetodo";
             this.cboMetodo.Size = new System.Drawing.Size(201, 21);
             this.cboMetodo.TabIndex = 0;
+            this.cboMetodo.SelectedIndexChanged += new System.EventHandler(this.cboMetodo_SelectedIndexChanged);
             // 
             // dgvMetodo
             // 
@@ -416,7 +421,7 @@ namespace Simulacion_1
             // 
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.txtConfianza);
+            this.groupBox3.Controls.Add(this.txt_confianza);
             this.groupBox3.Controls.Add(this.dgvChi);
             this.groupBox3.Controls.Add(this.txt_intervalos);
             this.groupBox3.Controls.Add(this.btnReiniciar);
@@ -446,16 +451,16 @@ namespace Simulacion_1
             this.label12.TabIndex = 8;
             this.label12.Text = "Nivel de Confianza";
             // 
-            // txtConfianza
+            // txt_confianza
             // 
-            this.txtConfianza.Location = new System.Drawing.Point(109, 48);
-            this.txtConfianza.Mask = "99999";
-            this.txtConfianza.Name = "txtConfianza";
-            this.txtConfianza.Size = new System.Drawing.Size(75, 20);
-            this.txtConfianza.TabIndex = 0;
-            this.txtConfianza.Text = "95";
-            this.txtConfianza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtConfianza.ValidatingType = typeof(int);
+            this.txt_confianza.Location = new System.Drawing.Point(109, 48);
+            this.txt_confianza.Mask = "99999";
+            this.txt_confianza.Name = "txt_confianza";
+            this.txt_confianza.Size = new System.Drawing.Size(75, 20);
+            this.txt_confianza.TabIndex = 0;
+            this.txt_confianza.Text = "95";
+            this.txt_confianza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_confianza.ValidatingType = typeof(int);
             // 
             // dgvChi
             // 
@@ -566,7 +571,7 @@ namespace Simulacion_1
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.MaskedTextBox txtConfianza;
+        private System.Windows.Forms.MaskedTextBox txt_confianza;
         private System.Windows.Forms.DataGridView dgvChi;
         private System.Windows.Forms.MaskedTextBox txt_intervalos;
         private System.Windows.Forms.Button btnReiniciar;

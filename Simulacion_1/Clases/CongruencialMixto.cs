@@ -28,9 +28,6 @@ namespace Simulacion_1.Clases
 
         public override List<double> GenerarValores()
         {
-            if ((A == 0 && K == 0) || (M == 0 && G == 0)) return null;
-            if (M == 0) M = (int)Math.Pow(2, G);
-            if (A == 0) A = 1 + 4 * K;
             for (int i = 0; i < Cantidad; i++)
             {
                 double aXic = ((A* Xi) + C), xi1 = aXic % M;

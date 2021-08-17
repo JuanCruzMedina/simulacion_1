@@ -10,13 +10,13 @@ namespace Simulacion_1.Clases
     class TestChi
     {
         double salto;
-        double[] intervalos;
-        double[] fo;            // Frecuencias observadas
-        double[] fe;            // Frecuencias esperadas
-        double[] c;             // Estadistico
-        double cac;             // Estadistico de prueba (C acumulado)
-        double valorCritico;    // Si cac (C acumulado) es mayor al valor critico, es posible rechazar la hipotesis nula
-        bool rechazada;
+        public double[] fo { get; set; } //Frecuencias observadas
+        public double[] fe { get; set; } // Frecuencias esperadas
+        public double[] intervalos { get; set; }
+        public double[] c { get; set; } // Estadistico
+        public double cac { get; set; } // Estadistico de prueba (C acumulado)
+        public bool rechazada { get; set; }
+        public double valorCritico { get; set; } // Si cac (C acumulado) es mayor al valor critico, es posible rechazar la hipotesis nula
 
 
         public TestChi(int cantIntervalos)
@@ -105,45 +105,6 @@ namespace Simulacion_1.Clases
 
             bool rechazada = !(bothtails > cac);
         }
-
-        /**
-        * -------------------------------------------------- GETTERS --------------------------------------------------
-        */
-        public double[] getFrecuenciasObservadas()
-        {
-            return fo;
-        }
-
-        public double[] getFrecuenciasEsperadas()
-        {
-            return fe;
-        }
-
-        public double[] getIntervalos()
-        {
-            return intervalos;
-        }
-
-        public double[] getEstadisticos()
-        {
-            return c;
-        }
-
-        public double getEstadisticoPrueba()
-        {
-            return cac;
-        }
-
-        public bool isRechazada()
-        {
-            return rechazada;
-        }
-
-        public double getValorCritico()
-        {
-            return valorCritico;
-        }
-
     }
 
 

@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ChiCuadradoCondiciones.cs" />
     <Compile Include="Clases\Condiciones.cs" />
     <Compile Include="Clases\CongruencialMixto.cs" />
     <Compile Include="Clases\CongruencialMultiplicativo.cs" />

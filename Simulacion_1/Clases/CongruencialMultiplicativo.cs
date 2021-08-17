@@ -17,9 +17,7 @@ namespace Simulacion_1.Clases
 
         public override List<double> GenerarValores()
         {
-            if ((A == 0 && K == 0) || (M == 0 && G == 0)) return null;
-            if (M == 0) M = 2 ^ G;
-            if (A == 0) A = 1 + 4 * K;
+            int a_ = A; int _m = M;
             for (int i = 0; i < Cantidad; i++)
             {
                 double aXi = (A * Xi), xi1 = aXi % M;
