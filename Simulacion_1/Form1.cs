@@ -49,6 +49,25 @@ namespace Simulacion_1
             txt_g.Enabled = habilitar;
             txt_semilla.Enabled = habilitar;
         }
+
+        private void CargarGrillaChi(DataGridView grilla, TestChi lista)
+        {
+            grilla.Rows.Clear();
+            string intervalo;
+            for (int i = 0; i < lista.intervalos.Length; i++)
+            {
+                if (i == 0) intervalo = "0 - " + Convert.ToDouble(lista.intervalos[i].ToString("#.00"));
+                else intervalo = Convert.ToDouble(lista.intervalos[i - 1].ToString("#.00")) + " - " + Convert.ToDouble(lista.intervalos[i].ToString("#.00"));
+                var intv = intervalo;
+                var _fo = Convert.ToDouble(lista.fo[i].ToString("#.00"));
+                var _fe = Convert.ToDouble(lista.fe[i].ToString("#.00"));
+                var _c = Convert.ToDouble(lista.c[i].ToString("#.00"));
+                var _cac = Convert.ToDouble(lista.cac[i].ToString("#.00"));
+                grilla.Rows.Add(intv, _fo, _fe, _c, _cac);
+            }
+            dgvChi.Refresh();
+        }
+
         private Condiciones GetCondiciones()
         {
             int a, c, m, k, g, s, cant;
@@ -65,11 +84,11 @@ namespace Simulacion_1
         }
         private ChiCuadradoCondiciones GetCondicionesChi()
         {
-            int intervalos, confianza;
+            int intervalos;
             return new ChiCuadradoCondiciones()
             {
                 Subintervalos = int.TryParse(txt_intervalos.Text, out intervalos) ? intervalos : 0,
-                Confianza = int.TryParse(txt_confianza.Text, out confianza) ? confianza : 0,
+                Confianza = 95,
             };
         }
 
@@ -82,7 +101,17 @@ namespace Simulacion_1
                 {
                     if (DataSource.Count == 0) throw new Exception("Debe generar la lista de números pseudoaleatorios para realizar la prueba");
                     var tstChi = new TestChi(condiciones.Subintervalos);
-                    return true;
+                    bool rechazada = tstChi.procesar(DataSource);
+                    CargarGrillaChi(dgvChi, tstChi);
+
+                    Grafico g = new Grafico(tstChi.intervalos, tstChi.fe, tstChi.fo);
+                    g.ShowDialog();
+
+                    string msg = "Con los grados de libertad " + (tstChi.intervalos.Length - 1) + " se obtuvo un valor calculado de " + (tstChi.cac[tstChi.cac.Length-1]) + ". Se obtuvo un valor crítico de " + tstChi.valorCritico + ", por lo tanto, la hipótesis ";
+                    if (rechazada) msg += "fue rechazada";
+                    else msg += "no puede ser rechazada";
+                    MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return rechazada;
                 }
                 else
                 {
@@ -256,7 +285,6 @@ namespace Simulacion_1
             AplicarRango();
         }
 
-        #endregion
 
         private void cboMetodo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -315,6 +343,18 @@ namespace Simulacion_1
                 txt_m.Text = "";
             }
             else txt_m.Enabled = true;
+        }
+
+        #endregion
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProbar_Click(object sender, EventArgs e)
+        {
+            TestChi();
         }
     }
 }

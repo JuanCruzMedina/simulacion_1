@@ -20,3 +20,4 @@ C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\ob
 C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.pdb
 C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\bin\Debug\alglib.net.dll
 C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.CopyComplete
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Grafico.resources

@@ -14,7 +14,7 @@ namespace Simulacion_1.Clases
         public double[] fe { get; set; } // Frecuencias esperadas
         public double[] intervalos { get; set; }
         public double[] c { get; set; } // Estadistico
-        public double cac { get; set; } // Estadistico de prueba (C acumulado)
+        public double[] cac { get; set; } // Estadistico de prueba (C acumulado)
         public bool rechazada { get; set; }
         public double valorCritico { get; set; } // Si cac (C acumulado) es mayor al valor critico, es posible rechazar la hipotesis nula
 
@@ -27,6 +27,7 @@ namespace Simulacion_1.Clases
             fo = new double[cantIntervalos];
             fe = new double[cantIntervalos];
             c = new double[cantIntervalos];
+            cac = new double[cantIntervalos];
             salto = 1.0 / cantIntervalos;
 
             // Generamos los intervalos
@@ -37,7 +38,7 @@ namespace Simulacion_1.Clases
             }
         }
 
-        public void procesar(List<double> numeros)
+        public bool procesar(List<Iteracion> numeros)
         {
             // Primero calculamos las frecuencias observadas
             calcularFO(numeros);
@@ -47,18 +48,20 @@ namespace Simulacion_1.Clases
             calcularEstadisticoPrueba();
             // Verificamos si se rechaza la hipotesis nula
             testHipotesis(numeros);
+
+            return rechazada;
         }
 
         // Calcular Frecuencias Observadas
-        private void calcularFO(List<double> numeros)
+        private void calcularFO(List<Iteracion> numeros)
         {
             // Vamos metiendo cada numero en el intervalo que corresponde
-            foreach (double numero in numeros)
+            foreach (Iteracion numero in numeros)
             //double numero :numeros
             {
                 for (int i = 0; i < this.intervalos.Length; i++)
                 {
-                    if (this.intervalos[i] > numero && numero > (this.intervalos[i] - this.salto))
+                    if (this.intervalos[i] > numero.Valor && numero.Valor > (this.intervalos[i] - this.salto))
                     {
                         fo[i]++;
                         continue;
@@ -68,7 +71,7 @@ namespace Simulacion_1.Clases
         }
 
         // Calcular Frecuencias Esperadas
-        private void calcularFE(List<double> numeros)
+        private void calcularFE(List<Iteracion> numeros)
         {
             for (int i = 0; i < this.fe.Length; i++)
             {
@@ -78,33 +81,70 @@ namespace Simulacion_1.Clases
 
         private void calcularEstadisticoPrueba()
         {
+            double valorAnt = 0;
             for (int i = 0; i < this.fe.Length; i++)
             {
                 this.c[i] = ((this.fe[i] - this.fo[i]) * (this.fe[i] - this.fo[i])) / this.fe[i];
-                cac += c[i];
+                valorAnt += this.c[i];
+                this.cac[i] = valorAnt;
             }
         }
 
         // Este metodo verifica si se puede rechazar o no la hipotesis nula
-        public void testHipotesis(List<double> numeros)
+
+        public void testHipotesis(List<Iteracion> numeros)
         {
             int gradosLibertad;
             if (intervalos.Length == 1) gradosLibertad = 1;
             else gradosLibertad = intervalos.Length - 1;
-            // Con este alpha definimos que existe un riesgo de 5% de concluir que la muestra no se ajusta a la
-            // distribución propuesta, cuando en realidad si lo hace.
+            Dictionary<int, double> valoresCriticos = new Dictionary<int, double>();
+            CargarDiccionario(valoresCriticos);
+            this.valorCritico = valoresCriticos[gradosLibertad];
 
-            //double alpha = 0.05;
-
-            // Esta clase proviene de la libreria.............
-            double bothtails;
-            double righttail;
-            double lefttails;
-
-            alglib.onesamplevariancetest(numeros.ToArray(), numeros.Count, cac, out bothtails, out righttail, out lefttails);
-
-            bool rechazada = !(bothtails > cac);
+            bool rechazada = !(this.valorCritico > cac[cac.Length - 1]);
         }
+
+        private void CargarDiccionario(Dictionary<int, double> valoresCriticos)
+        {
+            valoresCriticos.Add(1, 3.84);
+            valoresCriticos.Add(2, 5.99);
+            valoresCriticos.Add(3, 7.81);
+            valoresCriticos.Add(4, 9.49);
+            valoresCriticos.Add(5, 11.1);
+            valoresCriticos.Add(6, 12.6);
+            valoresCriticos.Add(7, 14.1);
+            valoresCriticos.Add(8, 15.5);
+            valoresCriticos.Add(9, 16.9);
+            valoresCriticos.Add(10, 18.3);
+            valoresCriticos.Add(11, 19.7);
+            valoresCriticos.Add(12, 21.0);
+            valoresCriticos.Add(13, 22.4);
+            valoresCriticos.Add(14, 23.7);
+            valoresCriticos.Add(15, 25.0);
+            valoresCriticos.Add(16, 26.3);
+            valoresCriticos.Add(17, 27.6);
+            valoresCriticos.Add(18, 28.9);
+            valoresCriticos.Add(19, 30.1);
+            valoresCriticos.Add(20, 31.4);
+            valoresCriticos.Add(21, 32.7);
+            valoresCriticos.Add(22, 33.9);
+            valoresCriticos.Add(23, 35.2);
+            valoresCriticos.Add(24, 36.4);
+            valoresCriticos.Add(25, 37.7);
+            valoresCriticos.Add(26, 38.9);
+            valoresCriticos.Add(27, 40.1);
+            valoresCriticos.Add(28, 41.3);
+            valoresCriticos.Add(29, 42.6);
+            valoresCriticos.Add(30, 43.8);
+            valoresCriticos.Add(40, 55.8);
+            valoresCriticos.Add(50, 67.5);
+            valoresCriticos.Add(60, 79.1);
+            valoresCriticos.Add(70, 90.5);
+            valoresCriticos.Add(80, 101.9);
+            valoresCriticos.Add(90, 113.1);
+            valoresCriticos.Add(100, 124.3);
+        }
+
     }
 
 

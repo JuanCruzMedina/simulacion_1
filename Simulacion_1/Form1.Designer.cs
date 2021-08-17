@@ -64,6 +64,11 @@ namespace Simulacion_1
             this.label12 = new System.Windows.Forms.Label();
             this.txt_confianza = new System.Windows.Forms.MaskedTextBox();
             this.dgvChi = new System.Windows.Forms.DataGridView();
+            this.Intervalo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_intervalos = new System.Windows.Forms.MaskedTextBox();
             this.btnReiniciar = new System.Windows.Forms.Button();
             this.btnProbar = new System.Windows.Forms.Button();
@@ -83,7 +88,7 @@ namespace Simulacion_1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(759, 47);
+            this.panel1.Size = new System.Drawing.Size(955, 47);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -93,7 +98,7 @@ namespace Simulacion_1
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(759, 47);
+            this.panel2.Size = new System.Drawing.Size(955, 47);
             this.panel2.TabIndex = 1;
             // 
             // label7
@@ -103,7 +108,7 @@ namespace Simulacion_1
             this.label7.ForeColor = System.Drawing.Color.SteelBlue;
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(759, 47);
+            this.label7.Size = new System.Drawing.Size(955, 47);
             this.label7.TabIndex = 0;
             this.label7.Text = "Generador de Números Aleatorios";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,15 +118,15 @@ namespace Simulacion_1
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel3.Controls.Add(this.btnGenerar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 367);
+            this.panel3.Location = new System.Drawing.Point(0, 379);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(759, 48);
+            this.panel3.Size = new System.Drawing.Size(955, 48);
             this.panel3.TabIndex = 1;
             // 
             // btnGenerar
             // 
             this.btnGenerar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerar.Location = new System.Drawing.Point(672, 13);
+            this.btnGenerar.Location = new System.Drawing.Point(868, 13);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 0;
@@ -136,7 +141,7 @@ namespace Simulacion_1
             this.txt_m.Name = "txt_m";
             this.txt_m.Size = new System.Drawing.Size(79, 20);
             this.txt_m.TabIndex = 0;
-            this.txt_m.Text = "8";
+            this.txt_m.Text = "0";
             this.txt_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_m.ValidatingType = typeof(int);
             this.txt_m.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_m_KeyUp);
@@ -211,7 +216,7 @@ namespace Simulacion_1
             this.txt_k.Name = "txt_k";
             this.txt_k.Size = new System.Drawing.Size(79, 20);
             this.txt_k.TabIndex = 3;
-            this.txt_k.Text = "3";
+            this.txt_k.Text = "0";
             this.txt_k.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_k.ValidatingType = typeof(int);
             this.txt_k.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_k_KeyUp);
@@ -223,7 +228,7 @@ namespace Simulacion_1
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(79, 20);
             this.txt_cantidad.TabIndex = 6;
-            this.txt_cantidad.Text = "20";
+            this.txt_cantidad.Text = "50000";
             this.txt_cantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_cantidad.ValidatingType = typeof(int);
             // 
@@ -234,7 +239,7 @@ namespace Simulacion_1
             this.txt_semilla.Name = "txt_semilla";
             this.txt_semilla.Size = new System.Drawing.Size(79, 20);
             this.txt_semilla.TabIndex = 5;
-            this.txt_semilla.Text = "6";
+            this.txt_semilla.Text = "0";
             this.txt_semilla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_semilla.ValidatingType = typeof(int);
             // 
@@ -245,7 +250,7 @@ namespace Simulacion_1
             this.txt_g.Name = "txt_g";
             this.txt_g.Size = new System.Drawing.Size(79, 20);
             this.txt_g.TabIndex = 4;
-            this.txt_g.Text = "3";
+            this.txt_g.Text = "0";
             this.txt_g.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_g.ValidatingType = typeof(int);
             this.txt_g.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_g_KeyUp);
@@ -257,7 +262,7 @@ namespace Simulacion_1
             this.txt_c.Name = "txt_c";
             this.txt_c.Size = new System.Drawing.Size(79, 20);
             this.txt_c.TabIndex = 2;
-            this.txt_c.Text = "7";
+            this.txt_c.Text = "0";
             this.txt_c.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_c.ValidatingType = typeof(int);
             // 
@@ -268,7 +273,7 @@ namespace Simulacion_1
             this.txt_a.Name = "txt_a";
             this.txt_a.Size = new System.Drawing.Size(79, 20);
             this.txt_a.TabIndex = 1;
-            this.txt_a.Text = "13";
+            this.txt_a.Text = "0";
             this.txt_a.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_a.ValidatingType = typeof(int);
             this.txt_a.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_a_KeyUp);
@@ -428,7 +433,7 @@ namespace Simulacion_1
             this.groupBox3.Controls.Add(this.btnProbar);
             this.groupBox3.Location = new System.Drawing.Point(472, 58);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(275, 304);
+            this.groupBox3.Size = new System.Drawing.Size(471, 304);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi Cuadrado";
@@ -453,6 +458,7 @@ namespace Simulacion_1
             // 
             // txt_confianza
             // 
+            this.txt_confianza.Enabled = false;
             this.txt_confianza.Location = new System.Drawing.Point(109, 48);
             this.txt_confianza.Mask = "99999";
             this.txt_confianza.Name = "txt_confianza";
@@ -469,12 +475,48 @@ namespace Simulacion_1
             this.dgvChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChi.BackgroundColor = System.Drawing.Color.White;
             this.dgvChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Intervalo,
+            this.fo,
+            this.fe,
+            this.c,
+            this.cac});
             this.dgvChi.Location = new System.Drawing.Point(6, 74);
             this.dgvChi.Name = "dgvChi";
             this.dgvChi.ReadOnly = true;
             this.dgvChi.RowHeadersWidth = 5;
-            this.dgvChi.Size = new System.Drawing.Size(263, 224);
+            this.dgvChi.Size = new System.Drawing.Size(459, 224);
             this.dgvChi.TabIndex = 6;
+            // 
+            // Intervalo
+            // 
+            this.Intervalo.HeaderText = "Intervalo";
+            this.Intervalo.Name = "Intervalo";
+            this.Intervalo.ReadOnly = true;
+            // 
+            // fo
+            // 
+            this.fo.HeaderText = "FO";
+            this.fo.Name = "fo";
+            this.fo.ReadOnly = true;
+            // 
+            // fe
+            // 
+            this.fe.HeaderText = "FE";
+            this.fe.Name = "fe";
+            this.fe.ReadOnly = true;
+            // 
+            // c
+            // 
+            this.c.HeaderText = "C";
+            this.c.Name = "c";
+            this.c.ReadOnly = true;
+            // 
+            // cac
+            // 
+            this.cac.HeaderText = "c(AC)";
+            this.cac.Name = "cac";
+            this.cac.ReadOnly = true;
             // 
             // txt_intervalos
             // 
@@ -489,28 +531,30 @@ namespace Simulacion_1
             // 
             // btnReiniciar
             // 
-            this.btnReiniciar.Location = new System.Drawing.Point(194, 46);
+            this.btnReiniciar.Location = new System.Drawing.Point(384, 46);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(75, 23);
             this.btnReiniciar.TabIndex = 3;
             this.btnReiniciar.Text = "Reiniciar";
             this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // btnProbar
             // 
-            this.btnProbar.Location = new System.Drawing.Point(194, 17);
+            this.btnProbar.Location = new System.Drawing.Point(303, 46);
             this.btnProbar.Name = "btnProbar";
             this.btnProbar.Size = new System.Drawing.Size(75, 23);
             this.btnProbar.TabIndex = 4;
             this.btnProbar.Text = "Probar";
             this.btnProbar.UseVisualStyleBackColor = true;
+            this.btnProbar.Click += new System.EventHandler(this.btnProbar_Click);
             // 
             // Simulacion_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(759, 415);
+            this.ClientSize = new System.Drawing.Size(955, 427);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.cboMetodo);
@@ -520,7 +564,7 @@ namespace Simulacion_1
             this.Controls.Add(this.panel1);
             this.Name = "Simulacion_1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Simulación 1";
+            this.Text = "Generación de números pseudoaleatorios - Test de Chi Cuadrado";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -570,12 +614,17 @@ namespace Simulacion_1
         private System.Windows.Forms.Button btnAplicarRango;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.MaskedTextBox txt_confianza;
         private System.Windows.Forms.DataGridView dgvChi;
         private System.Windows.Forms.MaskedTextBox txt_intervalos;
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.Button btnProbar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.MaskedTextBox txt_confianza;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Intervalo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cac;
     }
 }
 
