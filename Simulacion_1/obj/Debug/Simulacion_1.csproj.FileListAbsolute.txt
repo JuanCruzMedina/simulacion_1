@@ -21,3 +21,16 @@ C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\ob
 C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\bin\Debug\alglib.net.dll
 C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.CopyComplete
 C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP1\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Grafico.resources
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.exe.config
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.exe
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\bin\Debug\Simulacion_1.pdb
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\bin\Debug\alglib.net.dll
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csprojAssemblyReference.cache
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Simulacion_1.resources
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Grafico.resources
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.Properties.Resources.resources
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.GenerateResource.cache
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.CoreCompileInputs.cache
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.csproj.CopyComplete
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.exe
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_1\Simulacion_1\obj\Debug\Simulacion_1.pdb

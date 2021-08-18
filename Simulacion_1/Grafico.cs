@@ -6,6 +6,9 @@ namespace Simulacion_1
 {
     public partial class Grafico : Form
     {
+
+        int posY = 0;
+        int posX = 0;
         private double[] intv, valuesFE, valuesFO;
         public Grafico(double[] _intv, double[] _valuesFE, double[] _valuesFO)
         {
@@ -14,6 +17,64 @@ namespace Simulacion_1
             this.valuesFE = _valuesFE;
             this.valuesFO = _valuesFO;
         }
+        private void barraTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
+        }
+        private void chFE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnCerrarH_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
+        
+
+        private void btnRestaurarH_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurarH.Visible = false;
+            btnMaximizarH.Visible = true;
+        }
+
+        private void btnMinimizarH_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void barraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMaximizarH_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizarH.Visible = false;
+            btnRestaurarH.Visible = true;
+        }
+
+
 
         private void Grafico_Load(object sender, EventArgs e)
         {

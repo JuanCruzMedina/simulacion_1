@@ -28,7 +28,7 @@ namespace Simulacion_1.Clases
             fe = new double[cantIntervalos];
             c = new double[cantIntervalos];
             cac = new double[cantIntervalos];
-            salto = 1.0 / cantIntervalos;
+            salto = 1.0 / cantIntervalos; //aca deberiamos poner el valor maximo
 
             // Generamos los intervalos
             for (int i = 0; i < cantIntervalos; i++)
@@ -61,7 +61,7 @@ namespace Simulacion_1.Clases
             {
                 for (int i = 0; i < this.intervalos.Length; i++)
                 {
-                    if (this.intervalos[i] > numero.Valor && numero.Valor > (this.intervalos[i] - this.salto))
+                    if (this.intervalos[i] > numero.Valor && numero.Valor >= (this.intervalos[i] - this.salto))
                     {
                         fo[i]++;
                         continue;

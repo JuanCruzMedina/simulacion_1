@@ -203,7 +203,7 @@ namespace Simulacion_1
                 List<Iteracion> lst;
                 if (DataSource != null)
                 {
-                    if (MostrarDesde + 20 > DataSource.Count)
+                    if (MostrarDesde + 20 > DataSource.Count-1)
                     {
                         cantidad = (DataSource.Count - MostrarDesde);
                         btnProximo.Enabled = false;
@@ -346,7 +346,8 @@ namespace Simulacion_1
         }
 
         #endregion
-
+        int posY = 0;
+        int posX = 0;
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
 
@@ -355,6 +356,82 @@ namespace Simulacion_1
         private void btnProbar_Click(object sender, EventArgs e)
         {
             TestChi();
+        }
+
+        private void txt_desde_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void dgvChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Simulacion_1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnRestaurar.Visible = true;
+
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void barraTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
+        }
+
+        private void dgvMetodo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
