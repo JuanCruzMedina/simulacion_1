@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -14,7 +15,9 @@ namespace Simulacion_1
         public Simulacion_1()
         {
             InitializeComponent();
-            MessageBox.Show(" Dagotto, Florencia Agustina \n Donalisio, Juan Pablo \n Medina, Juan Cruz \n Spini, Leila Aylén \n Parrucci, Lara Estefania", "INTEGRANTES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string nombres = " Dagotto, Florencia Agustina - Donalisio, Juan Pablo - Medina, Juan Cruz - Spini, Leila Aylén - Parrucci, Lara Estefania \t\t- 4K4 \t- 2021";
+            lblNombres.Text = nombres;
+            lblNombres.ForeColor = Color.FromArgb(255, 255, 255);
             InicializarFormulario();
         }
 
@@ -37,6 +40,7 @@ namespace Simulacion_1
             cboMetodo.SelectedIndex = 0;
             DataSource = new List<Iteracion>();
             LimpiarGrilla();
+            dgvChi.DataSource = null;
             MostrarDesde = 0;
         }
 
@@ -96,6 +100,7 @@ namespace Simulacion_1
         {
             try
             {
+                dgvChi.DataSource = null;
                 var condiciones = GetCondicionesChi();
                 if (cboMetodo.SelectedIndex == 0 || cboMetodo.SelectedIndex == 2)
                 {
@@ -107,10 +112,11 @@ namespace Simulacion_1
                     Grafico g = new Grafico(tstChi.intervalos, tstChi.fe, tstChi.fo);
                     g.ShowDialog();
 
-                    string msg = "Con los grados de libertad " + (tstChi.intervalos.Length - 1) + " se obtuvo un valor calculado de " + (tstChi.cac[tstChi.cac.Length-1]) + ". Se obtuvo un valor crítico de " + tstChi.valorCritico + ", por lo tanto, la hipótesis ";
+                    string msg = "Con los grados de libertad " + (tstChi.intervalos.Length - 1) + " se obtuvo un valor calculado de " + (tstChi.cac[tstChi.cac.Length-1]) + ".\nSe obtuvo un valor crítico de " + tstChi.valorCritico + ", por lo tanto, la hipótesis ";
                     if (rechazada) msg += "fue rechazada";
                     else msg += "no puede ser rechazada";
-                    MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblResultado.Text = msg;
+                    lblResultado.ForeColor = Color.FromArgb(255, 255, 255);
                     return rechazada;
                 }
                 else
@@ -217,7 +223,6 @@ namespace Simulacion_1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                //MessageBox.Show("Ocurrio una inconsistencia al mostrar por cantidad");
                 return null;
             }
         }
@@ -225,6 +230,7 @@ namespace Simulacion_1
         private void Generar()
         {
             LimpiarGrilla();
+            dgvChi.DataSource = null;
             MostrarDesde = 0;
             DataSource = GenerarNumeros() as List<Iteracion>;
             if (DataSource == null) return;
@@ -288,6 +294,7 @@ namespace Simulacion_1
 
         private void cboMetodo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblResultado.Text = "";
             if (cboMetodo.SelectedIndex == 0)
             {
                 HabilitarTxt(true);
@@ -350,7 +357,7 @@ namespace Simulacion_1
         int posX = 0;
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
-
+            dgvChi.DataSource = null;
         }
 
         private void btnProbar_Click(object sender, EventArgs e)
@@ -358,22 +365,7 @@ namespace Simulacion_1
             TestChi();
         }
 
-        private void txt_desde_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void dgvChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Simulacion_1_Load(object sender, EventArgs e)
         {
 
         }
@@ -409,11 +401,6 @@ namespace Simulacion_1
 
         }
 
-        private void barraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void barraTitulo_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)
@@ -427,11 +414,6 @@ namespace Simulacion_1
                 Left = Left + (e.X - posX);
                 Top = Top + (e.Y - posY);
             }
-        }
-
-        private void dgvMetodo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

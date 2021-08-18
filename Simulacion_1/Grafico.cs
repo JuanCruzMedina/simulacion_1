@@ -39,7 +39,7 @@ namespace Simulacion_1
 
         private void btnCerrarH_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
         }
 
        
