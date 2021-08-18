@@ -30,15 +30,24 @@ namespace Simulacion_1.Clases
         {
             for (int i = 0; i < Cantidad; i++)
             {
-                double aXic = ((A* Xi) + C), xi1 = aXic % M;
-                Random = xi1 / M;
-                lstNumeros.Add(Random);
-                Xi = xi1;
+                if (i == 0)
+                {
+                    double a = Xi / M;
+                    lstNumeros.Add(a);
+                }
+                else
+                {
+                    double aXic = ((A * Xi) + C), xi1 = aXic % M;
+                    Random = xi1 / M;
+                    lstNumeros.Add(Random);
+                    Xi = xi1;
+                }
+
             }
             return lstNumeros.Select(x => Math.Round(x, 4)).ToList();
         }
 
-        
+
         public override double GenerarValorExtra()
         {
             if ((A == 0 && K == 0) || (M == 0 && G == 0)) return 0;

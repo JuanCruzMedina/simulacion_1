@@ -264,7 +264,7 @@ namespace Simulacion_1
 
         private List<Iteracion> GenerarLista(List<double> lst)
         {
-            int index = 1;
+            int index = 0;
             return lst.Select(x => { return new Iteracion { Indice = index++, Valor = x }; }).ToList();
         }
 

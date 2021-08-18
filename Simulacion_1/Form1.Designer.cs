@@ -30,10 +30,10 @@ namespace Simulacion_1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Simulacion_1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.barraTitulo = new System.Windows.Forms.Panel();
@@ -143,7 +143,7 @@ namespace Simulacion_1
             this.label13.Location = new System.Drawing.Point(423, 13);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(370, 17);
+            this.label13.Size = new System.Drawing.Size(449, 19);
             this.label13.TabIndex = 7;
             this.label13.Text = "Generador de números aleatorios - Test chi cuadrado";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -233,7 +233,7 @@ namespace Simulacion_1
             this.txt_m.Margin = new System.Windows.Forms.Padding(4);
             this.txt_m.Mask = "99999";
             this.txt_m.Name = "txt_m";
-            this.txt_m.Size = new System.Drawing.Size(104, 20);
+            this.txt_m.Size = new System.Drawing.Size(104, 23);
             this.txt_m.TabIndex = 0;
             this.txt_m.Text = "0";
             this.txt_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -247,7 +247,7 @@ namespace Simulacion_1
             this.label2.Location = new System.Drawing.Point(55, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 19);
+            this.label2.Size = new System.Drawing.Size(25, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "m";
             // 
@@ -258,7 +258,7 @@ namespace Simulacion_1
             this.label3.Location = new System.Drawing.Point(56, 60);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 19);
+            this.label3.Size = new System.Drawing.Size(22, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "a";
             // 
@@ -269,7 +269,7 @@ namespace Simulacion_1
             this.label4.Location = new System.Drawing.Point(57, 92);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 19);
+            this.label4.Size = new System.Drawing.Size(21, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "c";
             // 
@@ -280,7 +280,7 @@ namespace Simulacion_1
             this.label5.Location = new System.Drawing.Point(57, 124);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 19);
+            this.label5.Size = new System.Drawing.Size(19, 21);
             this.label5.TabIndex = 3;
             this.label5.Text = "k";
             // 
@@ -317,7 +317,7 @@ namespace Simulacion_1
             this.txt_k.Margin = new System.Windows.Forms.Padding(4);
             this.txt_k.Mask = "99999";
             this.txt_k.Name = "txt_k";
-            this.txt_k.Size = new System.Drawing.Size(104, 20);
+            this.txt_k.Size = new System.Drawing.Size(104, 23);
             this.txt_k.TabIndex = 3;
             this.txt_k.Text = "0";
             this.txt_k.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -330,7 +330,7 @@ namespace Simulacion_1
             this.txt_cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cantidad.Mask = "9999999";
             this.txt_cantidad.Name = "txt_cantidad";
-            this.txt_cantidad.Size = new System.Drawing.Size(104, 20);
+            this.txt_cantidad.Size = new System.Drawing.Size(104, 23);
             this.txt_cantidad.TabIndex = 6;
             this.txt_cantidad.Text = "50000";
             this.txt_cantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -342,7 +342,7 @@ namespace Simulacion_1
             this.txt_semilla.Margin = new System.Windows.Forms.Padding(4);
             this.txt_semilla.Mask = "99999";
             this.txt_semilla.Name = "txt_semilla";
-            this.txt_semilla.Size = new System.Drawing.Size(104, 20);
+            this.txt_semilla.Size = new System.Drawing.Size(104, 23);
             this.txt_semilla.TabIndex = 5;
             this.txt_semilla.Text = "0";
             this.txt_semilla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -354,7 +354,7 @@ namespace Simulacion_1
             this.txt_g.Margin = new System.Windows.Forms.Padding(4);
             this.txt_g.Mask = "99999";
             this.txt_g.Name = "txt_g";
-            this.txt_g.Size = new System.Drawing.Size(104, 20);
+            this.txt_g.Size = new System.Drawing.Size(104, 23);
             this.txt_g.TabIndex = 4;
             this.txt_g.Text = "0";
             this.txt_g.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -367,7 +367,7 @@ namespace Simulacion_1
             this.txt_c.Margin = new System.Windows.Forms.Padding(4);
             this.txt_c.Mask = "99999";
             this.txt_c.Name = "txt_c";
-            this.txt_c.Size = new System.Drawing.Size(104, 20);
+            this.txt_c.Size = new System.Drawing.Size(104, 23);
             this.txt_c.TabIndex = 2;
             this.txt_c.Text = "0";
             this.txt_c.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -379,7 +379,7 @@ namespace Simulacion_1
             this.txt_a.Margin = new System.Windows.Forms.Padding(4);
             this.txt_a.Mask = "99999";
             this.txt_a.Name = "txt_a";
-            this.txt_a.Size = new System.Drawing.Size(104, 20);
+            this.txt_a.Size = new System.Drawing.Size(104, 23);
             this.txt_a.TabIndex = 1;
             this.txt_a.Text = "0";
             this.txt_a.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -393,7 +393,7 @@ namespace Simulacion_1
             this.label8.Location = new System.Drawing.Point(24, 220);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 17);
+            this.label8.Size = new System.Drawing.Size(78, 20);
             this.label8.TabIndex = 3;
             this.label8.Text = "Cantidad";
             // 
@@ -404,7 +404,7 @@ namespace Simulacion_1
             this.label1.Location = new System.Drawing.Point(32, 188);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 19);
+            this.label1.Size = new System.Drawing.Size(65, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Semilla";
             // 
@@ -415,7 +415,7 @@ namespace Simulacion_1
             this.label6.Location = new System.Drawing.Point(56, 156);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(18, 19);
+            this.label6.Size = new System.Drawing.Size(21, 21);
             this.label6.TabIndex = 3;
             this.label6.Text = "g";
             // 
@@ -433,7 +433,7 @@ namespace Simulacion_1
             this.cboMetodo.Location = new System.Drawing.Point(16, 71);
             this.cboMetodo.Margin = new System.Windows.Forms.Padding(4);
             this.cboMetodo.Name = "cboMetodo";
-            this.cboMetodo.Size = new System.Drawing.Size(267, 22);
+            this.cboMetodo.Size = new System.Drawing.Size(267, 24);
             this.cboMetodo.TabIndex = 0;
             this.cboMetodo.SelectedIndexChanged += new System.EventHandler(this.cboMetodo_SelectedIndexChanged);
             // 
@@ -443,23 +443,23 @@ namespace Simulacion_1
             this.dgvMetodo.AllowUserToDeleteRows = false;
             this.dgvMetodo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMetodo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMetodo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMetodo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMetodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMetodo.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMetodo.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvMetodo.Location = new System.Drawing.Point(291, 73);
             this.dgvMetodo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMetodo.Name = "dgvMetodo";
@@ -498,10 +498,11 @@ namespace Simulacion_1
             this.txt_hasta.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hasta.Mask = "99999";
             this.txt_hasta.Name = "txt_hasta";
-            this.txt_hasta.Size = new System.Drawing.Size(99, 20);
+            this.txt_hasta.Size = new System.Drawing.Size(99, 23);
             this.txt_hasta.TabIndex = 1;
             this.txt_hasta.Text = "0";
             this.txt_hasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_hasta.ValidatingType = typeof(int);
             // 
             // groupBox2
             // 
@@ -542,7 +543,7 @@ namespace Simulacion_1
             this.label10.Location = new System.Drawing.Point(32, 20);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 15);
+            this.label10.Size = new System.Drawing.Size(51, 17);
             this.label10.TabIndex = 8;
             this.label10.Text = "Desde";
             // 
@@ -552,7 +553,7 @@ namespace Simulacion_1
             this.label9.Location = new System.Drawing.Point(143, 20);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 15);
+            this.label9.Size = new System.Drawing.Size(46, 17);
             this.label9.TabIndex = 8;
             this.label9.Text = "Hasta";
             // 
@@ -562,7 +563,7 @@ namespace Simulacion_1
             this.txt_desde.Margin = new System.Windows.Forms.Padding(4);
             this.txt_desde.Mask = "99999";
             this.txt_desde.Name = "txt_desde";
-            this.txt_desde.Size = new System.Drawing.Size(99, 20);
+            this.txt_desde.Size = new System.Drawing.Size(99, 23);
             this.txt_desde.TabIndex = 0;
             this.txt_desde.Text = "3";
             this.txt_desde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -595,7 +596,7 @@ namespace Simulacion_1
             this.label11.Location = new System.Drawing.Point(41, 27);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 15);
+            this.label11.Size = new System.Drawing.Size(96, 17);
             this.label11.TabIndex = 8;
             this.label11.Text = "SubIntervalos";
             // 
@@ -606,7 +607,7 @@ namespace Simulacion_1
             this.label12.Location = new System.Drawing.Point(9, 63);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 15);
+            this.label12.Size = new System.Drawing.Size(136, 17);
             this.label12.TabIndex = 8;
             this.label12.Text = "Nivel de Confianza";
             // 
@@ -617,7 +618,7 @@ namespace Simulacion_1
             this.txt_confianza.Margin = new System.Windows.Forms.Padding(4);
             this.txt_confianza.Mask = "99999";
             this.txt_confianza.Name = "txt_confianza";
-            this.txt_confianza.Size = new System.Drawing.Size(99, 20);
+            this.txt_confianza.Size = new System.Drawing.Size(99, 23);
             this.txt_confianza.TabIndex = 0;
             this.txt_confianza.Text = "95";
             this.txt_confianza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -636,27 +637,27 @@ namespace Simulacion_1
             this.fe,
             this.c,
             this.cac});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChi.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChi.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvChi.GridColor = System.Drawing.Color.Black;
             this.dgvChi.Location = new System.Drawing.Point(8, 91);
             this.dgvChi.Margin = new System.Windows.Forms.Padding(4);
             this.dgvChi.Name = "dgvChi";
             this.dgvChi.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChi.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChi.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvChi.RowHeadersWidth = 5;
             this.dgvChi.Size = new System.Drawing.Size(612, 297);
             this.dgvChi.TabIndex = 6;
@@ -702,7 +703,7 @@ namespace Simulacion_1
             this.txt_intervalos.Margin = new System.Windows.Forms.Padding(4);
             this.txt_intervalos.Mask = "99999";
             this.txt_intervalos.Name = "txt_intervalos";
-            this.txt_intervalos.Size = new System.Drawing.Size(99, 20);
+            this.txt_intervalos.Size = new System.Drawing.Size(99, 23);
             this.txt_intervalos.TabIndex = 1;
             this.txt_intervalos.Text = "3";
             this.txt_intervalos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -738,7 +739,7 @@ namespace Simulacion_1
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.Location = new System.Drawing.Point(143, 491);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(16, 22);
+            this.lblResultado.Size = new System.Drawing.Size(19, 26);
             this.lblResultado.TabIndex = 10;
             this.lblResultado.Text = " ";
             // 
@@ -748,7 +749,7 @@ namespace Simulacion_1
             this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombres.Location = new System.Drawing.Point(145, 553);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(12, 17);
+            this.lblNombres.Size = new System.Drawing.Size(14, 20);
             this.lblNombres.TabIndex = 11;
             this.lblNombres.Text = " ";
             // 
