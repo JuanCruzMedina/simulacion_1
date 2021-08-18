@@ -28,44 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grafico));
             this.chFE = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chFO = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnMaximizarH = new System.Windows.Forms.PictureBox();
             this.btnRestaurarH = new System.Windows.Forms.PictureBox();
             this.btnMinimizarH = new System.Windows.Forms.PictureBox();
             this.btnCerrarH = new System.Windows.Forms.PictureBox();
-            this.btnMaximizarH = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chFE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             this.barraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizarH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurarH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizarH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizarH)).BeginInit();
             this.SuspendLayout();
             // 
             // chFE
             // 
             this.chFE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.chFE.BackImageTransparentColor = System.Drawing.Color.White;
+            this.chFE.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            this.chFE.BackImageTransparentColor = System.Drawing.Color.Transparent;
             this.chFE.BackSecondaryColor = System.Drawing.Color.White;
             this.chFE.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            chartArea3.Name = "ChartArea1";
-            this.chFE.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chFE.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chFE.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chFE.Legends.Add(legend1);
             this.chFE.Location = new System.Drawing.Point(1, 46);
-            this.chFE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chFE.Margin = new System.Windows.Forms.Padding(4);
             this.chFE.Name = "chFE";
-            this.chFE.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.chFE.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             this.chFE.Size = new System.Drawing.Size(871, 339);
             this.chFE.TabIndex = 0;
             this.chFE.Text = "chart1";
@@ -74,18 +75,19 @@
             // chFO
             // 
             this.chFO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.chFO.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
             this.chFO.BackImageTransparentColor = System.Drawing.Color.White;
             this.chFO.BackSecondaryColor = System.Drawing.Color.White;
             this.chFO.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            chartArea4.Name = "ChartArea1";
-            this.chFO.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chFO.Legends.Add(legend4);
-            this.chFO.Location = new System.Drawing.Point(1, 393);
-            this.chFO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            chartArea2.Name = "ChartArea1";
+            this.chFO.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chFO.Legends.Add(legend2);
+            this.chFO.Location = new System.Drawing.Point(1, 384);
+            this.chFO.Margin = new System.Windows.Forms.Padding(4);
             this.chFO.Name = "chFO";
-            this.chFO.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            this.chFO.Size = new System.Drawing.Size(871, 361);
+            this.chFO.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chFO.Size = new System.Drawing.Size(871, 370);
             this.chFO.TabIndex = 1;
             this.chFO.Text = "chart2";
             // 
@@ -102,7 +104,7 @@
             // 
             // barraTitulo
             // 
-            this.barraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.barraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.barraTitulo.Controls.Add(this.btnMaximizarH);
             this.barraTitulo.Controls.Add(this.btnRestaurarH);
             this.barraTitulo.Controls.Add(this.btnMinimizarH);
@@ -116,17 +118,18 @@
             this.barraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.barraTitulo_Paint);
             this.barraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseMove);
             // 
-            // label13
+            // btnMaximizarH
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Location = new System.Drawing.Point(304, 14);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(209, 19);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "Gráficas de histogramas";
+            this.btnMaximizarH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizarH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximizarH.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizarH.Image")));
+            this.btnMaximizarH.Location = new System.Drawing.Point(802, 12);
+            this.btnMaximizarH.Name = "btnMaximizarH";
+            this.btnMaximizarH.Size = new System.Drawing.Size(25, 25);
+            this.btnMaximizarH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMaximizarH.TabIndex = 12;
+            this.btnMaximizarH.TabStop = false;
+            this.btnMaximizarH.Click += new System.EventHandler(this.btnMaximizarH_Click_1);
             // 
             // btnRestaurarH
             // 
@@ -168,18 +171,17 @@
             this.btnCerrarH.TabStop = false;
             this.btnCerrarH.Click += new System.EventHandler(this.btnCerrarH_Click);
             // 
-            // btnMaximizarH
+            // label13
             // 
-            this.btnMaximizarH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizarH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizarH.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizarH.Image")));
-            this.btnMaximizarH.Location = new System.Drawing.Point(802, 12);
-            this.btnMaximizarH.Name = "btnMaximizarH";
-            this.btnMaximizarH.Size = new System.Drawing.Size(25, 25);
-            this.btnMaximizarH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMaximizarH.TabIndex = 12;
-            this.btnMaximizarH.TabStop = false;
-            this.btnMaximizarH.Click += new System.EventHandler(this.btnMaximizarH_Click_1);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label13.Location = new System.Drawing.Point(304, 14);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(209, 19);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Gráficas de histogramas";
             // 
             // Grafico
             // 
@@ -191,7 +193,7 @@
             this.Controls.Add(this.chFO);
             this.Controls.Add(this.chFE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Grafico";
             this.Text = "Grafico";
             this.Load += new System.EventHandler(this.Grafico_Load);
@@ -200,10 +202,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             this.barraTitulo.ResumeLayout(false);
             this.barraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizarH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurarH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizarH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizarH)).EndInit();
             this.ResumeLayout(false);
 
         }

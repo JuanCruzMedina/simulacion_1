@@ -105,18 +105,21 @@ namespace Simulacion_1
                 if (cboMetodo.SelectedIndex == 0 || cboMetodo.SelectedIndex == 2)
                 {
                     if (DataSource.Count == 0) throw new Exception("Debe generar la lista de números pseudoaleatorios para realizar la prueba");
-                    var tstChi = new TestChi(condiciones.Subintervalos);
+                    var tstChi = new TestChi(DataSource, condiciones.Subintervalos);
                     bool rechazada = tstChi.procesar(DataSource);
                     CargarGrillaChi(dgvChi, tstChi);
 
                     Grafico g = new Grafico(tstChi.intervalos, tstChi.fe, tstChi.fo);
                     g.ShowDialog();
 
-                    string msg = "Con los grados de libertad " + (tstChi.intervalos.Length - 1) + " se obtuvo un valor calculado de " + (tstChi.cac[tstChi.cac.Length-1]) + ".\nSe obtuvo un valor crítico de " + tstChi.valorCritico + ", por lo tanto, la hipótesis ";
+                    string msg = "Resultado: Con los grados de libertad " + (tstChi.intervalos.Length - 1) + " se obtuvo un valor calculado de " + (tstChi.cac[tstChi.cac.Length-1]) + ".\nSe obtuvo un valor crítico de " + tstChi.valorCritico + ", por lo tanto, la hipótesis ";
                     if (rechazada) msg += "fue rechazada";
                     else msg += "no puede ser rechazada";
                     lblResultado.Text = msg;
+                    lblResultado.Font = new Font("gothic century", lblResultado.Font.Size);
                     lblResultado.ForeColor = Color.FromArgb(255, 255, 255);
+                  
+
                     return rechazada;
                 }
                 else
@@ -414,6 +417,11 @@ namespace Simulacion_1
                 Left = Left + (e.X - posX);
                 Top = Top + (e.Y - posY);
             }
+        }
+
+        private void Simulacion_1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

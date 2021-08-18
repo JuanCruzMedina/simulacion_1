@@ -19,7 +19,7 @@ namespace Simulacion_1.Clases
         public double valorCritico { get; set; } // Si cac (C acumulado) es mayor al valor critico, es posible rechazar la hipotesis nula
 
 
-        public TestChi(int cantIntervalos)
+        public TestChi(List<Iteracion> numeros, int cantIntervalos)
         {
             // Inicializamos las variables
             double anterior = 0;
@@ -28,7 +28,14 @@ namespace Simulacion_1.Clases
             fe = new double[cantIntervalos];
             c = new double[cantIntervalos];
             cac = new double[cantIntervalos];
-            salto = 1.0 / cantIntervalos; //aca deberiamos poner el valor maximo
+
+            List<double> nums = new List<double>();
+            foreach (var item in numeros)
+            {
+                nums.Add(item.Valor);
+            }
+
+            salto = nums.Max() / cantIntervalos; //aca deberiamos poner el valor maximo
 
             // Generamos los intervalos
             for (int i = 0; i < cantIntervalos; i++)
