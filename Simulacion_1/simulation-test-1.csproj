@@ -55,34 +55,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\ChiCuadradoCondiciones.cs" />
-    <Compile Include="Clases\Condiciones.cs" />
-    <Compile Include="Clases\CongruencialMixto.cs" />
-    <Compile Include="Clases\CongruencialMultiplicativo.cs" />
-    <Compile Include="Clases\DelLenguaje.cs" />
-    <Compile Include="Clases\Iteracion.cs" />
-    <Compile Include="Clases\Metodo.cs" />
-    <Compile Include="Clases\TestChi.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Models\ChiCuadradoCondiciones.cs" />
+    <Compile Include="Models\Condiciones.cs" />
+    <Compile Include="Models\CongruencialMixto.cs" />
+    <Compile Include="Models\CongruencialMultiplicativo.cs" />
+    <Compile Include="Models\DelLenguaje.cs" />
+    <Compile Include="Models\Iteracion.cs" />
+    <Compile Include="Models\Metodo.cs" />
+    <Compile Include="Models\TestChi.cs" />
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grafico.cs">
+    <Compile Include="Display.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Grafico.Designer.cs">
-      <DependentUpon>Grafico.cs</DependentUpon>
+    <Compile Include="Display.Designer.cs">
+      <DependentUpon>Display.cs</DependentUpon>
     </Compile>
-    <Compile Include="IMetodo.cs" />
+    <Compile Include="Contracts\IMetodoGeneracion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Grafico.resx">
-      <DependentUpon>Grafico.cs</DependentUpon>
+    <EmbeddedResource Include="Display.resx">
+      <DependentUpon>Display.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

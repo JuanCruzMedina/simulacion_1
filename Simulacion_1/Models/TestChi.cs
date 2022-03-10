@@ -1,114 +1,94 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace Simulacion_1.Clases
 {
     class TestChi
     {
-        double salto;
-        public double[] fo { get; set; } //Frecuencias observadas
-        public double[] fe { get; set; } // Frecuencias esperadas
-        public double[] intervalos { get; set; }
-        public double[] c { get; set; } // Estadistico
-        public double[] cac { get; set; } // Estadistico de prueba (C acumulado)
-        public bool rechazada { get; set; }
-        public double valorCritico { get; set; } // Si cac (C acumulado) es mayor al valor critico, es posible rechazar la hipotesis nula
+        private readonly double _salto;
+        public double[] Fo { get; set; } //Frecuencias observadas
+        public double[] Fe { get; set; } // Frecuencias esperadas
+        public double[] Intervalos { get; set; }
+        public double[] C { get; set; } // Estadistico
+        public double[] Cac { get; set; } // Estadistico de prueba (C acumulado)
+        public bool Rechazada { get; set; }
+        public double ValorCritico { get; set; } // Si cac (C acumulado) es mayor al valor critico, es posible rechazar la hipotesis nula
 
 
         public TestChi(List<Iteracion> numeros, int cantIntervalos)
         {
             // Inicializamos las variables
             double anterior = 0;
-            intervalos = new double[cantIntervalos];
-            fo = new double[cantIntervalos];
-            fe = new double[cantIntervalos];
-            c = new double[cantIntervalos];
-            cac = new double[cantIntervalos];
+            Intervalos = new double[cantIntervalos];
+            Fo = new double[cantIntervalos];
+            Fe = new double[cantIntervalos];
+            C = new double[cantIntervalos];
+            Cac = new double[cantIntervalos];
 
-            List<double> nums = new List<double>();
-            foreach (var item in numeros)
-            {
-                nums.Add(item.Valor);
-            }
-
-            salto = nums.Max() / cantIntervalos; //aca deberiamos poner el valor maximo
+            double salto = numeros.Max(x => x.Valor) / cantIntervalos; //aca deberiamos poner el valor maximo
 
             // Generamos los intervalos
             for (int i = 0; i < cantIntervalos; i++)
             {
-                anterior += salto;
-                intervalos[i] = anterior;
+                anterior += _salto;
+                Intervalos[i] = anterior;
             }
         }
 
-        public bool procesar(List<Iteracion> numeros)
+        public bool Procesar(List<Iteracion> numeros)
         {
             // Primero calculamos las frecuencias observadas
-            calcularFO(numeros);
+            CalcularFO(numeros);
             // Calculamos las frecuencias esperadas
-            calcularFE(numeros);
+            CalcularFE(numeros);
             // Obtenemos el estadistico acumulado
-            calcularEstadisticoPrueba();
+            CalcularEstadisticoPrueba();
             // Verificamos si se rechaza la hipotesis nula
-            testHipotesis(numeros);
+            TestHipotesis(numeros);
 
-            return rechazada;
+            return Rechazada;
         }
 
         // Calcular Frecuencias Observadas
-        private void calcularFO(List<Iteracion> numeros)
+        private void CalcularFO(List<Iteracion> numeros)
         {
             // Vamos metiendo cada numero en el intervalo que corresponde
             foreach (Iteracion numero in numeros)
-            //double numero :numeros
-            {
-                for (int i = 0; i < this.intervalos.Length; i++)
-                {
-                    if (this.intervalos[i] > numero.Valor && numero.Valor >= (this.intervalos[i] - this.salto))
-                    {
-                        fo[i]++;
-                        continue;
-                    }
-                }
-            }
+                for (int i = 0; i < Intervalos.Length; i++)
+                    if (this.Intervalos[i] > numero.Valor && numero.Valor >= (Intervalos[i] - _salto))
+                        Fo[i]++;
         }
 
         // Calcular Frecuencias Esperadas
-        private void calcularFE(List<Iteracion> numeros)
+        private void CalcularFE(List<Iteracion> numeros)
         {
-            for (int i = 0; i < this.fe.Length; i++)
-            {
-                this.fe[i] = (double)numeros.Count / this.intervalos.Length;
-            }
+            for (int i = 0; i < Fe.Length; i++)
+                Fe[i] = (double)numeros.Count / Intervalos.Length;
         }
 
-        private void calcularEstadisticoPrueba()
+        private void CalcularEstadisticoPrueba()
         {
             double valorAnt = 0;
-            for (int i = 0; i < this.fe.Length; i++)
+            for (int i = 0; i < Fe.Length; i++)
             {
-                this.c[i] = ((this.fe[i] - this.fo[i]) * (this.fe[i] - this.fo[i])) / this.fe[i];
-                valorAnt += this.c[i];
-                this.cac[i] = valorAnt;
+                C[i] = ((Fe[i] - Fo[i]) * (Fe[i] - Fo[i])) / Fe[i];
+                valorAnt += C[i];
+                Cac[i] = valorAnt;
             }
         }
 
-        // Este metodo verifica si se puede rechazar o no la hipotesis nula
-
-        public void testHipotesis(List<Iteracion> numeros)
+        /// <summary>
+        /// Este metodo verifica si se puede rechazar o no la hipotesis nula.
+        /// </summary>
+        /// <param name="iteraciones">No se usa... </param>
+        public void TestHipotesis(List<Iteracion> iteraciones)
         {
-            int gradosLibertad;
-            if (intervalos.Length == 1) gradosLibertad = 1;
-            else gradosLibertad = intervalos.Length - 1;
+            int gradosLibertad = Intervalos.Length == 1 ? 1 : Intervalos.Length -1;
             Dictionary<int, double> valoresCriticos = new Dictionary<int, double>();
             CargarDiccionario(valoresCriticos);
-            this.valorCritico = valoresCriticos[gradosLibertad];
-
-            bool rechazada = !(this.valorCritico > cac[cac.Length - 1]);
+            ValorCritico = valoresCriticos[gradosLibertad];
+            //bool rechazada = !(this.ValorCritico > Cac[Cac.Length - 1]);
         }
 
         private void CargarDiccionario(Dictionary<int, double> valoresCriticos)
@@ -151,9 +131,6 @@ namespace Simulacion_1.Clases
             valoresCriticos.Add(90, 113.1);
             valoresCriticos.Add(100, 124.3);
         }
-
     }
-
-
 }
 

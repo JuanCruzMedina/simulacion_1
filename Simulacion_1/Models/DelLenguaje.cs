@@ -7,15 +7,7 @@ namespace Simulacion_1.Clases
     {
         #region Propiedades
 
-        private Random _Random;
-        public Random oRandom
-        {
-            get {
-                if (_Random == null)
-                    _Random = new Random();
-                return _Random; }
-            set { _Random = value; }
-        }
+        private readonly Random _random = new Random();
 
         #endregion
 
@@ -32,11 +24,11 @@ namespace Simulacion_1.Clases
         public override List<double> GenerarValores()
         {
             for (int i = 0; i < Cantidad; i++)
-                lstNumeros.Add(oRandom.NextDouble());
-            return lstNumeros;
+                LstNumeros.Add(_random.NextDouble());
+            return LstNumeros;
         }
 
-        public override double GenerarValorExtra() => oRandom.NextDouble();
+        public override double GenerarValorExtra() => _random.NextDouble();
 
         #endregion
     }

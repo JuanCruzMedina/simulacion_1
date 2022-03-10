@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulacion_1", "Simulacion_1\Simulacion_1.csproj", "{4EED82B8-BE73-48C2-AFBA-C5DE24868117}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simulation-test-1", "Simulacion_1\simulation-test-1.csproj", "{4EED82B8-BE73-48C2-AFBA-C5DE24868117}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1DE0288-EA3A-4F6F-AB9C-8DA0682A5A21}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

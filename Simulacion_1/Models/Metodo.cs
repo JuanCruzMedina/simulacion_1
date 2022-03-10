@@ -19,7 +19,7 @@ namespace Simulacion_1.Clases
             Semilla = semilla;
             Cantidad = cantidad;
             Xi = semilla;
-            this.lstNumeros = new List<double>();
+            this.LstNumeros = new List<double>();
         }
         #endregion
 
@@ -33,7 +33,7 @@ namespace Simulacion_1.Clases
         private protected int Cantidad { get; set; }
         private protected double Random { get; set; }
         private protected double Xi { get; set; }
-        private protected List<double> lstNumeros { get; set; }
+        private protected List<double> LstNumeros { get; set; }
 
         #endregion
 
@@ -41,7 +41,7 @@ namespace Simulacion_1.Clases
 
         public abstract List<double> GenerarValores();
         public abstract double GenerarValorExtra();
-        public List<double> GetValores() => this.lstNumeros.Select(x => Math.Round(x,4)).ToList();
+        public List<double> GetValores() => LstNumeros.Select(x => Math.Round(x,4)).ToList();
 
         #endregion
 

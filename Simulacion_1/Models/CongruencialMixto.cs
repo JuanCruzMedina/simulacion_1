@@ -33,29 +33,35 @@ namespace Simulacion_1.Clases
                 if (i == 0)
                 {
                     double a = Xi / M;
-                    lstNumeros.Add(a);
+                    LstNumeros.Add(a);
                 }
                 else
                 {
                     double aXic = ((A * Xi) + C), xi1 = aXic % M;
                     Random = xi1 / M;
-                    lstNumeros.Add(Random);
+                    LstNumeros.Add(Random);
                     Xi = xi1;
                 }
 
             }
-            return lstNumeros.Select(x => Math.Round(x, 4)).ToList();
+            return LstNumeros.Select(x => Math.Round(x, 4)).ToList();
         }
 
 
         public override double GenerarValorExtra()
         {
-            if ((A == 0 && K == 0) || (M == 0 && G == 0)) return 0;
-            if (M == 0) M = 2 ^ G;
-            if (A == 0) A = 1 + 4 * K;
+            if ((A == 0 && K == 0) || (M == 0 && G == 0)) 
+                return 0;
+            
+            if (M == 0) 
+                M = 2 ^ G;
+            
+            if (A == 0) 
+                A = 1 + 4 * K;
+            
             double aXic = ((this.A * Xi) + C), xi1 = aXic % M;
             Random = xi1 / M;
-            lstNumeros.Add(Random);
+            LstNumeros.Add(Random);
             Xi = xi1;
             return Random;
         }
